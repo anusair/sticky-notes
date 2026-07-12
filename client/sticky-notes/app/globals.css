@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: #121212;
+    --color-surface: #1E1E1E;
+    --color-card: #252525;
+    --color-border: #374151;
+  
+    --color-primary: #8B5CF6;
+    --color-muted: #9CA3AF;
+    --color-hover: #7C3AED;
+}
+
+.active-card { 
+    z-index: 999;
+}
