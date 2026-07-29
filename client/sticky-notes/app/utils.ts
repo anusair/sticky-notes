@@ -13,15 +13,16 @@ export const setNewOffset = (card, mouseMoveDir = { x: 0, y: 0 }) => {
   };
 };
 
-
+let highestZ = 1;
 export const activeCard = (card) => {
-  card.style.zIndex = "999";
+  highestZ++;
+  card.style.zIndex = highestZ;
+};
 
-  const cards = document.querySelectorAll('.card-note');
-
-  cards.forEach((c) => {
-    if (c != card) {
-      c.style.zIndex = "998";
-    }
-  })
-}
+export const formatDate = (date: string | Date) => {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(date));
+};
