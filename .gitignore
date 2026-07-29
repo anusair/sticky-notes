@@ -1,0 +1,9 @@
+# Backend
+server/node_modules/
+server/.env
+server/venv/
+server/__pycache__/
+
+# General
+.DS_Store
+*.log
